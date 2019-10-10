@@ -6,9 +6,10 @@
 #
 #------------------------------------------------------------------------------
 #
-# This script will create :
+# This script will:
 # create dynamic env go project
 # create new go project
+# open project using VS Code
 #------------------------------------------------------------------------------
 #
 # Build script:
