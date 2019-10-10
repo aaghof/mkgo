@@ -38,8 +38,8 @@ create_project() {
     git init -q $project_dir
 
     # set env
-    echo "export GOPATH=$PWD" >> $project/.envrc
-    echo "export GOBIN=$GOPATH/bin" >> $project/.envrc
+    echo "export GOPATH=$(pwd)/$project" >> $project/.envrc
+    echo "export GOBIN=$(pwd)/$project/bin" >> $project/.envrc
 
     # load env
     direnv allow $project
@@ -58,6 +58,10 @@ create_project() {
     echo -e "\n# $project go project created"
     echo -e "# to start coding, please go to project directory"
     echo -e "cd $project/src/$namespace/$project\n"
+
+    # open project using visual studio code
+    code $project
+    
 }
 
 response=
